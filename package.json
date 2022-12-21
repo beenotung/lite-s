@@ -1,0 +1,35 @@
+{
+  "name": "lite-s",
+  "version": "0.0.0",
+  "description": "A simple state manage library with pull-push based design.",
+  "keywords": [
+    "state",
+    "s.js",
+    "lite",
+    "reactive",
+    "composable",
+    "dependency-tracking",
+    "typescript",
+    "cdn"
+  ],
+  "author": {
+    "name": "Beeno Tung",
+    "email": "aabbcc1241@yahoo.com.hk",
+    "url": "https://beeno-tung.surge.sh"
+  },
+  "license": "BSD-2-Clause",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beenotung/lite-s.git"
+  },
+  "homepage": "https://github.com/beenotung/lite-s#readme",
+  "bugs": {
+    "url": "https://github.com/beenotung/lite-s/issues"
+  },
+  "main": "s.js",
+  "scripts": {},
+  "devDependencies": {
+    "esbuild": "^0.15.18",
+    "typescript": "^4.9.4"
+  }
+}
