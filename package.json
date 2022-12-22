@@ -1,6 +1,6 @@
 {
   "name": "lite-s",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A simple state manage library with pull-push based design.",
   "keywords": [
     "state",
