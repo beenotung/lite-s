@@ -1,0 +1,7 @@
+<script src="../s.js"></script>
+<script>
+  let a = S(1)
+  let b = S.map(() => a.value * 2)
+  S.run(() => console.log(`${a}, ${b}`))
+  a.value = 10
+</script>

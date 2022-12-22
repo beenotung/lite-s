@@ -26,10 +26,39 @@
   "bugs": {
     "url": "https://github.com/beenotung/lite-s/issues"
   },
-  "main": "s.js",
-  "scripts": {},
+  "files": [
+    "core.d.ts",
+    "core.js",
+    "core.mjs",
+    "s.js"
+  ],
+  "type": "commonjs",
+  "browser": "./s.js",
+  "types": "./core.d.ts",
+  "main": "./core.js",
+  "exports": {
+    "require": "./core.js",
+    "import": "./core.mjs"
+  },
+  "scripts": {
+    "test": "run-p test:*",
+    "test:tsc": "tsc --noEmit",
+    "test:cjs": "node test.js",
+    "test:mjs": "node test.mjs",
+    "test:ts": "ts-node test.ts",
+    "build:dts": "tsc -p tsconfig.dts.json",
+    "build:esm": "esbuild core.ts --format=esm --outfile=core.mjs",
+    "build:cjs": "esbuild core.ts --format=cjs --outfile=core.js",
+    "build:iife": "esbuild browser.ts --format=iife --bundle --outfile=s.js",
+    "build": "run-p build:*"
+  },
   "devDependencies": {
+    "@types/node": "^18.11.15",
     "esbuild": "^0.15.18",
+    "npm-run-all": "^4.1.5",
+    "serve-lite": "^1.1.0",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
     "typescript": "^4.9.4"
   }
 }
